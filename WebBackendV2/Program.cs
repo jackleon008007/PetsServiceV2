@@ -29,6 +29,7 @@ using GrupoWebBackend.Shared.Domain.Repositories;
 using GrupoWebBackend.Shared.Persistence.Context;
 using GrupoWebBackend.Shared.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore;
+using Org.BouncyCastle.Math.EC;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -38,6 +39,17 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+
+//string kvURL = builder.Configuration["KeyVaultConfig:KVUrl"];
+//string tenantId = builder.Configuration["KeyVaultConfig:KVUrl"];
+//string clientId = builder.Configuration["KeyVaultConfig:KVUrl"];
+//string clientSecret = builder.Configuration["KeyVaultConfig:KVUrl"];
+
+
+
+
+
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
